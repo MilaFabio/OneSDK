@@ -1,0 +1,62 @@
+{
+	"debug":{"verify":true},
+	"urls":["", {"url":"", "priority": 10}],
+	"commands":["save", {"cmd":"settings", "settings":{"reportLocation":true, "advertisingId":true, "userId": true}}],
+	"strategy":{
+		"banner": {"list":["iad", "wapstart", "mytarget"], "strategy":"random"},
+		"fullscreen2": {
+				"list":[
+					"aerserv", 
+					"inmobi"], 
+				"strategy":"random"},
+		"fullscreen": {
+				"list":[
+					"adcolony",
+					{"name":"chartboost","type":"video", "preload": "low"}, 
+					], 
+				"strategy":"random"},
+		"video": {"list":["chartboost", "adcolony"],"strategy":"round-robin"},
+		"rewarded": {"list":["adcolony", "chartboost"], 
+				"strategy":"random"}
+	},
+	"networks":[
+		{
+			"name":"iad"
+		},
+		{
+			"name":"chartboost",
+			"id":"5512778104b016538cdc23c7",
+			"sig":"98affb317a16340ae05746372f891c2f8b936e40",
+			"video": "true",
+			"rewarded": "true"
+		},
+		{
+			"name":"adcolony",
+			"id":"appd3bc640756404ec5a1",
+			"videoId":"vz3d585c0fe221478899",
+			"rewardedId":"vz6bc9d4fb399d4025ad"
+		},
+		{
+			"name":"wapstart",
+			"id":"11179",
+			"fullscreenId":""
+		},
+		{
+			"name":"mytarget",
+			"id":"12940",
+			"fullscreenId":""
+		},
+		{
+			"name":"home",
+			"bannerId":"",
+			"halfId":"",
+			"fullscreenId":""
+		},
+		{
+			"name":"direct",
+			"bannerId":"",
+			"halfId":"",
+			"fullscreenId":""
+		}
+	]
+}
